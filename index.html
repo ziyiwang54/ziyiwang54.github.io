@@ -8,66 +8,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Ziyi Wang</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+            </ul>
+        </div>
+    </nav>
     <header>
         <div class="profile-photo">
             <!-- Profile photo placeholder -->
-            <img src="profile-placeholder.png" alt="Profile Photo" />
+            <img src="profile_image.JPG" alt="Profile Photo" />
         </div>
         <div class="header-info">
             <h1>Ziyi Wang</h1>
-            <p><i class="fa-solid fa-phone"></i> (217) 974-6103 &nbsp; <i class="fa-solid fa-envelope"></i> <a href="#">ziyiwanganddd@outlook.com</a></p>
-            <p><i class="fa-solid fa-location-dot"></i> 711 S Fourth Street, Champaign, Illinois (61820)</p>
+            <p><i class="fa-solid fa-phone"></i> (217) 974-6103 &nbsp; <i class="fa-solid fa-envelope"></i> <a href="mailto:ziyiwangandd@outlook.com">ziyiwangandd@outlook.com</a></p>
+            <p><i class="fa-solid fa-location-dot"></i> Champaign, IL 61820</p>
         </div>
     </header>
     <main>
         <section>
             <h2><i class="fa-solid fa-user"></i> About Me</h2>
-            <p><!-- Short bio placeholder --></p>
+            <p>I am an undergraduate student pursuing a B.S. in Computer Engineering at the University of Illinois at Urbana-Champaign. My research interests lie at the intersection of robotics, computer vision, and control systems, with a focus on developing safe and reliable autonomous systems.</p>
         </section>
+
+        <section class="recent-updates">
+            <h2><i class="fa-solid fa-bell"></i> Recent Updates</h2>
+            <div class="timeline">
+                <div class="update-item">
+                    <span class="update-date">June 2025</span>
+                    <div class="update-content">
+                        <strong>🏆 Yunni and Maxine Pao Memorial Scholarship</strong>
+                        <p>Honored to receive the Yunni and Maxine Pao Memorial Scholarship from Grainger College of Engineering (awarded to only 9 students in the college annually).</p>
+                    </div>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">May 2025</span>
+                    <div class="update-content">
+                        <strong>🏆 John and Sheila Woythal Scholarship</strong>
+                        <p>Received the John and Sheila Woythal Scholarship from the Department of Electrical and Computer Engineering (awarded to 10 students in the department annually).</p>
+                    </div>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">May 2025</span>
+                    <div class="update-content">
+                        <strong>🔬 New Research Position</strong>
+                        <p>Started working on Vision-Based Autonomous Perching at the Advanced Control Research Lab with Prof. Naira Hovakimyan.</p>
+                    </div>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">May 2025</span>
+                    <div class="update-content">
+                        <strong>💼 Summer Internship</strong>
+                        <p>Joined Laplace AI Lab Inc. as a Software and DevOps Engineer Intern, working on MCP tools for multi-agent collaboration.</p>
+                    </div>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">January 2025</span>
+                    <div class="update-content">
+                        <strong>👨‍🏫 Course Assistant Position</strong>
+                        <p>Started as a Course Assistant for ECE 391: Computer Systems Engineering at UIUC.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-            <ul>
-                <li><strong>University of Illinois at Urbana-Champaign</strong> — B.S in Computer Engineering, GPA: 3.91/4.0, Dean's List (08/2022 - 05/2026 expected)</li>
-                <li>Core Courses: Computer Systems Engineering, Control Systems, Robot Dynamics and Control, Deep Learning for Computer Vision</li>
-            </ul>
+            <div class="education-item">
+                <h3>University of Illinois at Urbana-Champaign</h3>
+                <p class="degree"><strong>B.S. in Computer Engineering</strong> (Expected May 2026)</p>
+                <p><strong>GPA:</strong> 3.90/4.00 | Dean's List</p>
+                <p><strong>Core Coursework:</strong> Computer Systems Engineering, Control Systems, Robot Dynamics and Control, Deep Learning for Computer Vision, Digital Signal Processing</p>
+            </div>
         </section>
-        <section>
-            <h2><i class="fa-solid fa-flask"></i> Research Experiences</h2>
-            <ul>
-                <li><strong>Aware Safety Critical Control Using Online System Identification and Control Barrier Function</strong> (08/2024 - Present)<br><em>RoboDesign Lab, UIUC</em><br>• Built up a complete pipeline for obtaining visual data, processing and feature extraction.<br>• Obtained the final center snapping and shape estimation through extracting the point cloud from RGBD data.<br>• Utilized embedded system, built up customized device tree for Nvidia Jetson Orin Nano.<br></li>
-                <li><strong>Weakly-supervised Traversability Prediction</strong> (01/2024 - 05/2024)<br><em>Human Centered Autonomy Lab, UIUC</em><br>• Tuned the MPPI controller, packaged as a ROS package.<br>• Acquired knowledge on gathering real data on campus and in the field.<br>• Studied traversability backtracking of a low-supervised system within agricultural areas.<br></li>
-            </ul>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-briefcase"></i> Internship Experience</h2>
-            <ul>
-                <li><strong>Shenzhen Weijing Power Intelligence Co., Ltd.</strong> — Embedded Development Engineer Intern (05/2024 - 06/2024)<br>• Trained and debugged a visual recognition model using YOLOv8.<br>• Developed and organized an 8GB hand gesture dataset.<br>• Integrated inertial sensor feedback parameters.<br></li>
-            </ul>
-        </section>
-        <section>
-            <h2><i class="fa-solid fa-users"></i> Leadership & Technical Experience</h2>
-            <ul>
-                <li><strong>Illini Robomaster</strong> — Embedded Team Leader (01/2023 - Present)<br>• Led an embedded systems team developing autonomous combat robots.<br>• Programmed a custom teleoperation controller for a 6-DOF Robotic Arm.<br>• Optimized swerve chassis' control algorithm.<br></li>
-            </ul>
-        </section>
+
         <section>
             <h2><i class="fa-solid fa-award"></i> Honors and Awards</h2>
             <ul>
-                <li>1v1 Confrontation 2nd place, Robomaster University League (North America) 2023 (top 10%)</li>
+                <li><strong>2025-2026 Yunni and Maxine Pao Memorial Scholarship</strong>, Grainger College of Engineering, UIUC (Awarded to only 9 students in the college annually)</li>
+                <li><strong>2025-2026 John and Sheila Woythal Scholarship</strong>, Department of Electrical and Computer Engineering, UIUC (Awarded to 10 students in the department annually)</li>
+                <li><strong>2nd Place (1v1 Confrontation)</strong>, RoboMaster University League North America 2023 (Top 10%)</li>
             </ul>
         </section>
+
         <section>
-            <h2><i class="fa-solid fa-code"></i> Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> C, C++, Python, Java, HTML</li>
-                <li><strong>Computer Vision Tools and Deep Learning Tools:</strong> YOLO v8, PyTorch, Scikit-learn, CUDA, SLAM</li>
-                <li><strong>Control:</strong> PID controller, ROS</li>
-                <li><strong>CAD:</strong> Solidworks, Fusion 360</li>
-                <li><strong>OS:</strong> Linux (Ubuntu, Fedora)</li>
-                <li><strong>Microcontroller:</strong> STM32F, Arduino</li>
-                <li><strong>IoT:</strong> FreeRTOS, CMSIS_RTOS_V2</li>
-                <li><strong>EDA:</strong> FreeEDA, Altium Designer</li>
-            </ul>
+            <h2><i class="fa-solid fa-users"></i> Leadership</h2>
+            <div class="leadership-item">
+                <h3>Course Assistant, ECE 391: Computer Systems Engineering</h3>
+                <p class="position-meta"><em>Department of Electrical and Computer Engineering, UIUC</em> | January 2025 - Present</p>
+                <ul>
+                    <li>Participated in the design and revision of course materials and machine problems (MPs) covering systems programming and operating systems topics</li>
+                    <li>Held office hours providing hands-on debugging support in C, RISC-V, and Unix tooling</li>
+                    <li>Assisted with grading and feedback to improve clarity and student outcomes</li>
+                </ul>
+            </div>
+            <div class="leadership-item">
+                <h3>Embedded Team Lead, Illini RoboMaster</h3>
+                <p class="position-meta"><em>Student Robotics Organization, UIUC</em> | January 2023 - Present</p>
+                <ul>
+                    <li>Lead embedded systems development for autonomous combat robots: microcontroller firmware (FreeRTOS, CMSIS-RTOS), CAN bus communication, and Jetson-based vision/navigation integration</li>
+                    <li>Established structured codebase standards improving feature iteration speed and on-field debug efficiency</li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
