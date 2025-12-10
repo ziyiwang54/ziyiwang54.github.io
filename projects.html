@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Projects | Ziyi Wang</title>
+    
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Stylesheets with cache busting -->
+    <link rel="stylesheet" href="style.css?v=1.0.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Ziyi Wang</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="page-header">
+            <h1><i class="fa-solid fa-code"></i> Course Projects</h1>
+            <p class="page-subtitle">Selected projects from coursework</p>
+        </div>
+
+        <section class="research-project">
+            <div class="project-header">
+                <h2>Robot Dynamics and Control Final Project</h2>
+                <span class="date-badge">Fall 2024</span>
+            </div>
+            <p class="position-info">
+                <strong>Course Project</strong> | ECE 470: Robot Dynamics and Control<br>
+                <em>University of Illinois at Urbana-Champaign</em>
+            </p>
+            <div class="project-description">
+                <p>This project involved the design and implementation of a high-performance control system for a CRS robotic manipulator to execute a complex sequence of tasks: precision peg-in-hole insertion, trajectory tracking through a constrained zigzag path, and delicate force control on a fragile object.</p>
+                
+                <p>The control architecture utilizes <strong>Task Space PD Control</strong> with <strong>Impedance Control</strong> principles to manage interaction forces and trajectory tracking. To ensure high fidelity tracking and stability, <strong>Friction Compensation</strong> and <strong>Gravity Compensation</strong> were implemented. The control law can be described as:</p>
+
+                <p>
+                    $$ \tau = J^T F_{task} + \tau_{fric}(\dot{q}) + \tau_{grav}(q) $$
+                </p>
+
+                <p>Where \( F_{task} \) is the force calculated in the task space to drive the end-effector to the desired position \( X_{des} \) with desired stiffness \( K_p \) and damping \( K_d \):</p>
+
+                <p>
+                    $$ F_{task} = K_p (X_{des} - X) + K_d (\dot{X}_{des} - \dot{X}) $$
+                </p>
+
+                <p>To achieve precise control in specific directions (e.g., for the zigzag task), the error dynamics were computed in a rotated frame \( N \) aligned with the path constraints:</p>
+
+                <p>
+                    $$ F_N = K_p^N {}^N R_W (X_{des} - X) + K_d^N {}^N R_W (\dot{X}_{des} - \dot{X}) $$
+                </p>
+
+                <h3>Task 1: Peg-in-Hole Insertion</h3>
+                <p>The robot executes a precision maneuver starting from the home position. The end-effector approaches the target coordinates, aligns vertically, and performs a controlled insertion. The controller maintains position holding for a dwell time of two seconds before retracting. This task demonstrates the system's positional accuracy and steady-state error minimization.</p>
+
+                <h3>Task 2: Constrained Zigzag Trajectory</h3>
+                <p>Following the insertion task, the manipulator navigates a 3D-printed zigzag channel. This requires continuous path planning and trajectory generation. A set of 8 waypoints defines the path, with higher density sampling at curvature discontinuities to ensure smooth motion. The impedance controller is tuned to be stiff in the tracking direction while compliant in orthogonal directions to prevent binding.</p>
+                
+                <div class="project-media">
+                    <img src="489demo/zigzag.avif" alt="Zigzag Task Demo" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+                </div>
+
+                <h3>Task 3: Force Control & Interaction</h3>
+                <p>The final phase involves applying a precise contact force to a fragile object (an egg). The control strategy switches from pure position control to an explicit force control scheme. The stiffness gain in the Z-direction (\( K_{pz} \)) is relaxed to zero, and a feedforward force command (\( F_{z,cmd} \)) is applied:</p>
+
+                <p>
+                    $$ \tau_{z} = J^T [0, 0, F_{z,cmd}]^T $$
+                </p>
+
+                <p>Through experimental tuning, an optimal force command of \( -12.65 \text{ N} \) was identified to maintain the target contact force between \( 500 \sim 1000 \text{ grams} \) without damaging the specimen.</p>
+
+                <h3>Implementation Challenges</h3>
+                <p>A significant challenge was the seamless transition between stiff position control and compliant force control. The feedforward force term required precise calibration to account for unmodeled dynamics and sensor noise. The final implementation achieved a robust performance window, successfully maintaining the required force range.</p>
+
+                <h3>Full Motion Demo</h3>
+                <div class="project-media">
+                    <video controls style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+                        <source src="489demo/fullmotion.MOV" type="video/quicktime">
+                        <source src="489demo/fullmotion.MOV" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <h3>Trajectory Code Snippet</h3>
+                <pre><code class="language-c">
+const point points[] = {
+    {0.15, 0, 0.44, 0 , 1, XYZSTIFF},
+    {.027, .357, .44, 0, 1, XYZSTIFF},      // above peg-hole
+    {.027, .357, .21, 0, 1, XYZSTIFF},      // right above peg-hole
+    {.027, .357, .125, 0, 2, ZSTIFF},       // into the hole
+    {.027, .357, .125, 0, 1, ZSTIFF},       // into the hole
+    {.027, .357, .44, 0, 2, ZSTIFF},        // above peg-hole
+    {.26, .10, .38, 0, 1, XYZSTIFF},        // above egg for avoiding obstale
+    {.391, .11, .21, 0, 1, XYZSTIFF},       // before entering zigzag
+    {.432, .017, .21, PI / 6, 2, YZSTIFF},  // after zig
+    {.322, .038, .21, 0, 2, XZSTIFF},       // before zag
+    {.4, -.063, .21, PI / 6, 2, YZSTIFF},   // after zag
+    {.39, -.06, .36, 0, 1, ZSTIFF},         // going up
+    {.243, .203, .38, 0, 2, XYZSTIFF},      // above egg
+    {.243, .203, .285, 0, 5, XYZSTIFF},     // press the egg
+    {.243, .203, .285, 0, 2, XYZSTIFF},     // press the egg
+    {0.15, 0, 0.44, 0 , 1, XYZSTIFF}        // back to start
+};
+                </code></pre>
+            </div>
+            <div class="keywords">
+                <span class="keyword">Robotics</span>
+                <span class="keyword">Control Theory</span>
+                <span class="keyword">Task Space PD Control</span>
+                <span class="keyword">Feedforward Force Control</span>
+                <span class="keyword">C</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

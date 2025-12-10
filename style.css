@@ -485,6 +485,69 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* Highlighted Project Section */
+.highlighted-project .project-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.highlighted-project .project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlighted-project h3 {
+  margin-top: 0;
+  color: #1a73e8;
+}
+
+.project-subtitle {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+}
+
+.btn-small {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f1f3f4;
+  color: #1a73e8;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-small:hover {
+  background-color: #e8f0fe;
+  color: #174ea6;
+  text-decoration: none;
+}
+
+/* Code Snippets */
+pre {
+  background: #f6f8fa;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+}
+
+code {
+  font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 0.9rem;
+  color: #24292e;
+}
 @media (max-width: 600px) {
   header {
     flex-direction: column;
