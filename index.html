@@ -11,7 +11,7 @@
     <meta http-equiv="Expires" content="0">
     
     <!-- Stylesheets with cache busting -->
-    <link rel="stylesheet" href="style.css?v=1.0.1">
+    <link rel="stylesheet" href="style.css?v=1.0.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -40,12 +40,26 @@
     <main>
         <section>
             <h2><i class="fa-solid fa-user"></i> About Me</h2>
-            <p>I am an undergraduate student pursuing a B.S. in Computer Engineering at the University of Illinois at Urbana-Champaign. My research interests lie at the intersection of robotics, computer vision, and control systems, with a focus on developing safe and reliable autonomous systems.</p>
+            <p>I am an undergraduate student pursuing a B.S. in Computer Engineering at the University of Illinois at Urbana-Champaign. My work sits at the intersection of embedded systems, robotics, computer vision, and control, with a focus on building reliable autonomy that runs on real robot hardware.</p>
         </section>
 
         <section class="recent-updates">
             <h2><i class="fa-solid fa-bell"></i> Recent Updates</h2>
             <div class="timeline">
+                <div class="update-item">
+                    <span class="update-date">2025-2026</span>
+                    <div class="update-content">
+                        <strong>🏆 Ellery B. Paine Outstanding Junior Award</strong>
+                        <p>Selected by the Department of Electrical and Computer Engineering at UIUC as a recipient of the Ellery B. Paine Outstanding Junior Award for the 2025-2026 academic year.</p>
+                    </div>
+                </div>
+                <div class="update-item">
+                    <span class="update-date">September 2025</span>
+                    <div class="update-content">
+                        <strong>📄 IROS 2026 Submission</strong>
+                        <p>Contributed to "Perch: A Vision-Based Approach for Autonomous Perching," currently under review for IEEE/RSJ IROS 2026.</p>
+                    </div>
+                </div>
                 <div class="update-item">
                     <span class="update-date">June 2025</span>
                     <div class="update-content">
@@ -89,7 +103,7 @@
             <div class="project-card">
                 <h3>Vision-Based Autonomous Perching</h3>
                 <p class="project-subtitle"><strong>Advanced Control Research Lab</strong> | Advisor: Prof. Naira Hovakimyan</p>
-                <p>Developing vision-based algorithms for autonomous perching capabilities enabling precise landing and attachment on various surfaces and structures. This project involves implementing computer vision pipelines for real-time detection and pose estimation.</p>
+                <p>Developed real-time vision and pose-estimation pipelines for autonomous perching, delivering target state estimates to onboard controllers and validating approach/contact behavior in hardware-in-the-loop experiments.</p>
                 <div class="project-links">
                     <a href="research.html" class="btn-small">View Details <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="projects.html" class="btn-small" style="margin-left: 10px;">Course Projects <i class="fa-solid fa-code"></i></a>
@@ -102,13 +116,14 @@
             <div class="education-item">
                 <h3>University of Illinois at Urbana-Champaign</h3>
                 <p class="degree"><strong>B.S. in Computer Engineering</strong> (Expected May 2026)</p>
-                <p><strong>Core Coursework:</strong> Computer Systems Engineering, Control Systems, Robot Dynamics and Control, Deep Learning for Computer Vision, Digital Signal Processing</p>
+                <p><strong>Core Coursework:</strong> Computer Systems Engineering, Computer Architecture, Control Systems, Robot Dynamics and Control, Digital Signal Processing</p>
             </div>
         </section>
 
         <section>
             <h2><i class="fa-solid fa-award"></i> Honors and Awards</h2>
             <ul>
+                <li><strong>2025-2026 Ellery B. Paine Outstanding Junior Award</strong>, Department of Electrical and Computer Engineering, UIUC</li>
                 <li><strong>2025-2026 Yunni and Maxine Pao Memorial Scholarship</strong>, Grainger College of Engineering, UIUC (Awarded to only 9 students in the college annually)</li>
                 <li><strong>2025-2026 John and Sheila Woythal Scholarship</strong>, Department of Electrical and Computer Engineering, UIUC (Awarded to 10 students in the department annually)</li>
                 <li><strong>2nd Place (1v1 Confrontation)</strong>, RoboMaster University League North America 2023 (Top 10%)</li>
@@ -130,14 +145,14 @@
                 <h3>Embedded Team Lead, Illini RoboMaster</h3>
                 <p class="position-meta"><em>Student Robotics Organization, UIUC</em> | January 2023 - Present</p>
                 <ul>
-                    <li>Lead embedded systems development for autonomous combat robots: microcontroller firmware (FreeRTOS, CMSIS-RTOS), CAN bus communication, and Jetson-based vision/navigation integration</li>
-                    <li>Established structured codebase standards improving feature iteration speed and on-field debug efficiency</li>
+                    <li>Lead embedded C/C++ firmware for autonomous combat robots: STM32-class microcontrollers, FreeRTOS/CMSIS-RTOS tasks, CAN motor/sensor messaging, PID motor control, and Jetson vision/navigation integration</li>
+                    <li>Established task scheduling, CAN message abstractions, watchdog/self-check routines, and field-debug workflows to improve hardware bring-up reliability</li>
                 </ul>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Ziyi Wang. All rights reserved.</p>
+        <p>&copy; 2026 Ziyi Wang. All rights reserved.</p>
     </footer>
 </body>
 </html>

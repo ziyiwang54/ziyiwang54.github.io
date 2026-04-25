@@ -11,7 +11,7 @@
     <meta http-equiv="Expires" content="0">
     
     <!-- Stylesheets with cache busting -->
-    <link rel="stylesheet" href="style.css?v=1.0.1">
+    <link rel="stylesheet" href="style.css?v=1.0.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
     <main>
         <div class="page-header">
             <h1><i class="fa-solid fa-flask"></i> Research Experience</h1>
-            <p class="page-subtitle">Exploring robotics, computer vision, and control systems</p>
+            <p class="page-subtitle">Exploring embedded robotics, computer vision, and control systems</p>
         </div>
 
         <section class="research-project">
@@ -43,11 +43,11 @@
                 <em>Advisor: Prof. Naira Hovakimyan | University of Illinois at Urbana-Champaign</em>
             </p>
             <div class="project-description">
-                <p>Developing vision-based algorithms for autonomous perching capabilities enabling precise landing and attachment on various surfaces and structures.</p>
+                <p>Developed real-time vision and pose-estimation pipelines for autonomous perching, with hardware-in-the-loop validation of approach and contact behavior.</p>
                 <ul>
-                    <li>Developed vision-based algorithms for autonomous perching capabilities enabling precise landing and attachment on various surfaces and structures</li>
-                    <li>Implemented computer vision pipelines for real-time detection and pose estimation of perching targets using camera/sensor specifications</li>
-                    <li>Designed and validated control algorithms for approach trajectories and contact dynamics during perching maneuvers</li>
+                    <li>Developed real-time detection and pose-estimation pipelines from camera/sensor specifications, delivering target state estimates for onboard perching control</li>
+                    <li>Designed and validated approach-trajectory and contact-dynamics controllers for repeatable perching maneuvers</li>
+                    <li>Contributed to "Perch: A Vision-Based Approach for Autonomous Perching," under review for IEEE/RSJ IROS 2026</li>
                 </ul>
             </div>
             <div class="keywords">
@@ -72,7 +72,7 @@
                 <ul>
                     <li>Engineered an end-to-end RGB-D perception pipeline (capture → point cloud filtering → feature extraction) delivering robust shape/pose priors to accelerate controller inertia estimation for humanoid SATYRR</li>
                     <li>Implemented center snapping and geometry estimation by segmenting point clouds from depth data; produced consistent results across varying lighting/occlusion conditions</li>
-                    <li>Customized NVIDIA Jetson Orin Nano environment (device tree overlays, driver configuration) enabling real-time sensing and motor interfacing on embedded platform</li>
+                    <li>Customized NVIDIA Jetson Orin Nano environment (device tree overlays, driver configuration, udev/systemd setup) enabling real-time sensing and motor interfacing on an embedded humanoid platform</li>
                 </ul>
             </div>
             <div class="keywords">
@@ -121,7 +121,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Ziyi Wang. All rights reserved.</p>
+        <p>&copy; 2026 Ziyi Wang. All rights reserved.</p>
     </footer>
 </body>
 </html>
