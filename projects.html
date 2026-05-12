@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Projects | Ziyi Wang</title>
+    <title>Projects | Ziyi Wang</title>
     
     <!-- Cache Control Meta Tags -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -34,9 +34,39 @@
     
     <main>
         <div class="page-header">
-            <h1><i class="fa-solid fa-code"></i> Course Projects</h1>
-            <p class="page-subtitle">Selected projects from coursework</p>
+            <h1><i class="fa-solid fa-code"></i> Projects</h1>
+            <p class="page-subtitle">Selected robotics, control, and embedded systems projects</p>
         </div>
+
+        <section class="research-project">
+            <div class="project-header">
+                <h2>6-DOF Robotic Arm Trajectory Validation</h2>
+                <span class="date-badge">Illini RoboMaster</span>
+            </div>
+            <p class="position-info">
+                <strong>Embedded Team Lead / Manipulator Integration</strong><br>
+                <em>University of Illinois at Urbana-Champaign</em>
+            </p>
+            <div class="project-description">
+                <p>This demo shows a 6-DOF robotic arm tracing a horizontal figure-eight trajectory as part of manipulator motion validation. I worked on the arm's electromechanical bring-up, joint-level testing, communication-path debugging, and the workflow used to exercise larger task-space motions after single-joint checks.</p>
+                <p>The broader arm system integrated actuator communication, embedded control, and motion-planning workflows used during iterative RoboMaster arm development. This trajectory demo is one compact view of the validation process: smooth multi-joint coordination, repeatable path execution, and practical debugging on real hardware.</p>
+
+                <h3>Horizontal Figure-Eight Demo</h3>
+                <div class="project-media video-frame">
+                    <video controls preload="metadata" playsinline>
+                        <source src="HorizontalEightTrajectory.MOV" type="video/quicktime">
+                        Your browser does not support embedded video playback.
+                    </video>
+                </div>
+            </div>
+            <div class="keywords">
+                <span class="keyword">Robotics</span>
+                <span class="keyword">6-DOF Manipulator</span>
+                <span class="keyword">Trajectory Validation</span>
+                <span class="keyword">Embedded Control</span>
+                <span class="keyword">RoboMaster</span>
+            </div>
+        </section>
 
         <section class="research-project">
             <div class="project-header">
@@ -75,10 +105,10 @@
                 <p>Following the insertion task, the manipulator navigates a 3D-printed zigzag channel. This requires continuous path planning and trajectory generation. A set of 8 waypoints defines the path, with higher density sampling at curvature discontinuities to ensure smooth motion. The impedance controller is tuned to be stiff in the tracking direction while compliant in orthogonal directions to prevent binding.</p>
                 
                 <div class="project-media">
-                    <img src="489demo/zigzag.avif" alt="Zigzag Task Demo" style="max-width: 100%; border-radius: 8px; margin: 1rem 0;">
+                    <img src="489demo/zigzag.avif" alt="Zigzag Task Demo">
                 </div>
 
-                <h3>Task 3: Force Control & Interaction</h3>
+                <h3>Task 3: Force Control &amp; Interaction</h3>
                 <p>The final phase involves applying a precise contact force to a fragile object (an egg). The control strategy switches from pure position control to an explicit force control scheme. The stiffness gain in the Z-direction (\( K_{pz} \)) is relaxed to zero, and a feedforward force command (\( F_{z,cmd} \)) is applied:</p>
 
                 <p>
@@ -91,8 +121,8 @@
                 <p>A significant challenge was the seamless transition between stiff position control and compliant force control. The feedforward force term required precise calibration to account for unmodeled dynamics and sensor noise. The final implementation achieved a robust performance window, successfully maintaining the required force range.</p>
 
                 <h3>Full Motion Demo</h3>
-                <div class="project-media" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin: 1rem 0;">
-                    <iframe src="https://www.youtube.com/embed/SiWEWoPlklc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+                <div class="project-media embed-frame">
+                    <iframe src="https://www.youtube.com/embed/SiWEWoPlklc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
 
                 <h3>Trajectory Code Snippet</h3>
