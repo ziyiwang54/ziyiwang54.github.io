@@ -3,163 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ziyi Wang | Personal Website</title>
-    
-    <!-- Cache Control Meta Tags -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
-    <!-- Stylesheets with cache busting -->
-    <link rel="stylesheet" href="style.css?v=1.0.2">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Ziyi Wang</title>
+    <meta name="description" content="Ziyi Wang: computer engineering student working on robotics, computer vision, embedded systems, and control.">
+    <link rel="stylesheet" href="minimal.css?v=1.0.0">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">Ziyi Wang</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="research.html" class="nav-link">Research</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="publications.html" class="nav-link">Publications</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header>
-        <div class="profile-photo">
-            <!-- Profile photo placeholder -->
-            <img src="profile_image.JPG" alt="Profile Photo" />
-        </div>
-        <div class="header-info">
-            <h1>Ziyi Wang</h1>
-            <p><i class="fa-solid fa-phone"></i> (217) 974-6103 &nbsp; <i class="fa-solid fa-envelope"></i> <a href="mailto:ziyiwangandd@outlook.com">ziyiwangandd@outlook.com</a></p>
-            <p><i class="fa-solid fa-location-dot"></i> Champaign, IL 61820</p>
-        </div>
-    </header>
-    <main>
-        <section>
-            <h2><i class="fa-solid fa-user"></i> About Me</h2>
-            <p>I am an undergraduate student pursuing a B.S. in Computer Engineering at the University of Illinois at Urbana-Champaign. My work sits at the intersection of embedded systems, robotics, computer vision, and control, with a focus on building reliable autonomy that runs on real robot hardware.</p>
-        </section>
-
-        <section class="recent-updates">
-            <h2><i class="fa-solid fa-bell"></i> Recent Updates</h2>
-            <div class="timeline">
-                <div class="update-item">
-                    <span class="update-date">2025-2026</span>
-                    <div class="update-content">
-                        <strong>🏆 Ellery B. Paine Outstanding Junior Award</strong>
-                        <p>Selected by the Department of Electrical and Computer Engineering at UIUC as a recipient of the Ellery B. Paine Outstanding Junior Award for the 2025-2026 academic year.</p>
-                    </div>
-                </div>
-                <div class="update-item">
-                    <span class="update-date">September 2025</span>
-                    <div class="update-content">
-                        <strong>📄 IROS 2026 Acceptance</strong>
-                        <p>Contributed to "Grasping as Anchoring: Expanding Urban Perching with a Hybrid Gripper for Aerial Robots," accepted to IEEE/RSJ IROS 2026.</p>
-                    </div>
-                </div>
-                <div class="update-item">
-                    <span class="update-date">June 2025</span>
-                    <div class="update-content">
-                        <strong>🏆 Yunni and Maxine Pao Memorial Scholarship</strong>
-                        <p>Honored to receive the Yunni and Maxine Pao Memorial Scholarship from Grainger College of Engineering (awarded to only 9 students in the college annually).</p>
-                    </div>
-                </div>
-                <div class="update-item">
-                    <span class="update-date">May 2025</span>
-                    <div class="update-content">
-                        <strong>🏆 John and Sheila Woythal Scholarship</strong>
-                        <p>Received the John and Sheila Woythal Scholarship from the Department of Electrical and Computer Engineering (awarded to 10 students in the department annually).</p>
-                    </div>
-                </div>
-                <div class="update-item">
-                    <span class="update-date">May 2025</span>
-                    <div class="update-content">
-                        <strong>🔬 New Research Position</strong>
-                        <p>Started working on Vision-Based Autonomous Perching at the Advanced Control Research Lab with Prof. Naira Hovakimyan.</p>
-                    </div>
-                </div>
-                <div class="update-item">
-                    <span class="update-date">May 2025</span>
-                    <div class="update-content">
-                        <strong>💼 Summer Internship</strong>
-                        <p>Joined Laplace AI Lab Inc. as a Software and DevOps Engineer Intern, working on MCP tools for multi-agent collaboration.</p>
-                    </div>
-                </div>
-                <div class="update-item">
-                    <span class="update-date">January 2025</span>
-                    <div class="update-content">
-                        <strong>👨‍🏫 Course Assistant Position</strong>
-                        <p>Started as a Course Assistant for ECE 391: Computer Systems Engineering at UIUC.</p>
-                    </div>
-                </div>
+    <main class="page">
+        <header class="intro">
+            <img class="portrait" src="profile_image_small.jpg" alt="Ziyi Wang">
+            <div>
+                <h1>Ziyi Wang</h1>
+                <p class="subtitle">Computer Engineering, University of Illinois Urbana-Champaign</p>
+                <p>
+                    I work on robotics systems that have to run on real hardware: computer vision,
+                    embedded software, perception pipelines, and control for aerial and humanoid robots.
+                    I am currently interested in reliable autonomy at the boundary between sensing,
+                    planning, and physical interaction.
+                </p>
+                <p class="links">
+                    <a href="mailto:ziyiwangandd@outlook.com">Email</a>
+                    <a href="research.html">Research</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="publications.html">Publications</a>
+                </p>
             </div>
-        </section>
-
-        <section class="highlighted-project">
-            <h2><i class="fa-solid fa-star"></i> Highlighted Project</h2>
-            <div class="project-card">
-                <h3>Urban Perching with a Hybrid Aerial Gripper</h3>
-                <p class="project-subtitle"><strong>Advanced Control Research Lab</strong> | Advisor: Prof. Naira Hovakimyan</p>
-                <p>Developed real-time vision and pose-estimation pipelines for an IEEE/RSJ IROS 2026 accepted hybrid aerial gripper system that combines compliant grasping with load-bearing perching, enabling pole perching and stop-sign perching through graspable anchoring adapters.</p>
-                <div class="project-media video-frame">
-                    <video controls preload="metadata" playsinline>
-                        <source src="IROS26.mp4" type="video/mp4">
-                        Your browser does not support embedded video playback.
-                    </video>
-                </div>
-                <div class="project-links">
-                    <a href="https://urbanperch.github.io/" class="btn-small" target="_blank" rel="noopener">Project Page <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    <a href="research.html" class="btn-small">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="projects.html" class="btn-small" style="margin-left: 10px;">Projects <i class="fa-solid fa-code"></i></a>
-                </div>
-            </div>
-        </section>
+        </header>
 
         <section>
-            <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-            <div class="education-item">
-                <h3>University of Illinois at Urbana-Champaign</h3>
-                <p class="degree"><strong>B.S. in Computer Engineering</strong> (Expected May 2026)</p>
-                <p><strong>Core Coursework:</strong> Computer Systems Engineering, Computer Architecture, Control Systems, Robot Dynamics and Control, Digital Signal Processing</p>
-            </div>
-        </section>
-
-        <section>
-            <h2><i class="fa-solid fa-award"></i> Honors and Awards</h2>
-            <ul>
-                <li><strong>2025-2026 Ellery B. Paine Outstanding Junior Award</strong>, Department of Electrical and Computer Engineering, UIUC</li>
-                <li><strong>2025-2026 Yunni and Maxine Pao Memorial Scholarship</strong>, Grainger College of Engineering, UIUC (Awarded to only 9 students in the college annually)</li>
-                <li><strong>2025-2026 John and Sheila Woythal Scholarship</strong>, Department of Electrical and Computer Engineering, UIUC (Awarded to 10 students in the department annually)</li>
-                <li><strong>2nd Place (1v1 Confrontation)</strong>, RoboMaster University League North America 2023 (Top 10%)</li>
+            <h2>News</h2>
+            <ul class="news">
+                <li><span>2026</span> Our paper <a href="https://urbanperch.github.io/">Grasping as Anchoring</a> was accepted to IEEE/RSJ IROS 2026.</li>
+                <li><span>2025</span> Selected for the Ellery B. Paine Outstanding Junior Award in UIUC ECE.</li>
+                <li><span>2025</span> Joined Advanced Control Research Lab to work on aerial robot perching.</li>
+                <li><span>2025</span> Continued as a course assistant for ECE 391: Computer Systems Engineering.</li>
             </ul>
         </section>
 
         <section>
-            <h2><i class="fa-solid fa-users"></i> Leadership</h2>
-            <div class="leadership-item">
-                <h3>Course Assistant, ECE 391: Computer Systems Engineering</h3>
-                <p class="position-meta"><em>Department of Electrical and Computer Engineering, UIUC</em> | January 2025 - Present</p>
-                <ul>
-                    <li>Participated in the design and revision of course materials and machine problems (MPs) covering systems programming and operating systems topics</li>
-                    <li>Held office hours providing hands-on debugging support in C, RISC-V, and Unix tooling</li>
-                    <li>Assisted with grading and feedback to improve clarity and student outcomes</li>
-                </ul>
-            </div>
-            <div class="leadership-item">
-                <h3>Embedded Team Lead, Illini RoboMaster</h3>
-                <p class="position-meta"><em>Student Robotics Organization, UIUC</em> | January 2023 - Present</p>
-                <ul>
-                    <li>Lead embedded C/C++ firmware for autonomous combat robots: STM32-class microcontrollers, FreeRTOS/CMSIS-RTOS tasks, CAN motor/sensor messaging, PID motor control, and Jetson vision/navigation integration</li>
-                    <li>Established task scheduling, CAN message abstractions, watchdog/self-check routines, and field-debug workflows to improve hardware bring-up reliability</li>
-                </ul>
-            </div>
+            <h2>Selected Research</h2>
+            <article class="entry">
+                <h3><a href="https://urbanperch.github.io/">Urban Perching with a Hybrid Aerial Gripper</a></h3>
+                <p class="meta">Advanced Control Research Lab, UIUC. Advisor: Prof. Naira Hovakimyan.</p>
+                <p>
+                    Contributed vision and pose-estimation pipelines for an IROS 2026 accepted aerial
+                    manipulation system that combines compliant grasping with load-bearing perching.
+                </p>
+                <p class="entry-links"><a href="https://urbanperch.github.io/">Project page</a> / <a href="https://urbanperch.github.io/assets/paper/perch_iros.pdf">PDF</a> / <a href="research.html">Details</a></p>
+            </article>
+
+            <article class="entry">
+                <h3><a href="research.html">Safety-Critical Control with Online System ID</a></h3>
+                <p class="meta">RoboDesign Lab, UIUC. Advisor: Prof. Joao Ramos.</p>
+                <p>
+                    Built RGB-D perception and embedded sensing support for object-aware whole-body
+                    teleoperation and safety-critical humanoid control.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <article class="entry">
+                <h3><a href="projects.html">6-DOF Robotic Arm Trajectory Validation</a></h3>
+                <p>
+                    Manipulator bring-up and trajectory validation for a RoboMaster arm, including
+                    joint testing, communication debugging, and figure-eight task-space motion.
+                </p>
+            </article>
+
+            <article class="entry">
+                <h3><a href="projects.html">Robot Dynamics and Control Final Project</a></h3>
+                <p>
+                    Task-space PD, impedance-style interaction control, gravity/friction compensation,
+                    and force control for a CRS manipulator task sequence.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <ul class="plain-list">
+                <li><strong>Course Assistant</strong>, ECE 391: Computer Systems Engineering, UIUC.</li>
+                <li><strong>Embedded Team Lead</strong>, Illini RoboMaster.</li>
+                <li><strong>Software and DevOps Intern</strong>, Laplace AI Lab Inc.</li>
+            </ul>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Ziyi Wang. All rights reserved.</p>
-    </footer>
 </body>
 </html>
