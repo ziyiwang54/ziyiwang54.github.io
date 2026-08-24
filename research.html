@@ -11,7 +11,7 @@
     <meta http-equiv="Expires" content="0">
     
     <!-- Stylesheets with cache busting -->
-    <link rel="stylesheet" href="style.css?v=1.0.2">
+    <link rel="stylesheet" href="style.css?v=1.0.3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -85,6 +85,27 @@
                     <li>Implemented center snapping and geometry estimation by segmenting point clouds from depth data; produced consistent results across varying lighting/occlusion conditions</li>
                     <li>Customized NVIDIA Jetson Orin Nano environment (device tree overlays, driver configuration, udev/systemd setup) enabling real-time sensing and motor interfacing on an embedded humanoid platform</li>
                 </ul>
+                <h3>Research Figures</h3>
+                <div class="research-gallery">
+                    <figure class="project-media research-figure research-figure-wide">
+                        <img src="assets/research/satyrr-framework.png" alt="Whole-body bilateral teleoperation framework for SATYRR with online object parameter estimation and control blocks" loading="lazy">
+                        <figcaption>Whole-body bilateral teleoperation framework integrating online object parameter estimation with control and safety filtering.</figcaption>
+                    </figure>
+                    <div class="research-gallery-grid">
+                        <figure class="project-media research-figure">
+                            <img src="assets/research/satyrr-object-estimation.png" alt="CenterSnap object size estimation and bottle-like object setup for inertial parameter estimation" loading="lazy">
+                            <figcaption>RGB-D object size estimation and physical object set used to initialize inertial parameter estimation.</figcaption>
+                        </figure>
+                        <figure class="project-media research-figure">
+                            <img src="assets/research/satyrr-hardware.png" alt="Human-machine interface and SATYRR wheeled humanoid hardware with camera, Jetson Orin Nano, RealSense, and gripper labels" loading="lazy">
+                            <figcaption>Custom human-machine interface and SATYRR hardware platform used for real-time sensing and teleoperation.</figcaption>
+                        </figure>
+                    </div>
+                    <figure class="project-media research-figure research-figure-wide">
+                        <img src="assets/research/satyrr-teleoperation-sequence.png" alt="Sequential SATYRR teleoperation snapshots showing lifting, moving, squatting, and releasing a heavy water bottle" loading="lazy">
+                        <figcaption>Sequential hardware snapshots from the heavy-object lifting, moving, squatting, and releasing task.</figcaption>
+                    </figure>
+                </div>
             </div>
             <div class="keywords">
                 <span class="keyword">RGB-D Perception</span>

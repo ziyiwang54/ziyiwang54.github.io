@@ -312,6 +312,37 @@ a:hover {
   border-radius: 8px;
 }
 
+.research-gallery {
+  margin-top: 1rem;
+}
+
+.research-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.research-figure {
+  margin: 1rem 0;
+}
+
+.research-figure img {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  object-fit: contain;
+}
+
+.research-figure figcaption {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.research-figure-wide img {
+  max-height: 360px;
+}
+
 .video-frame {
   overflow: hidden;
   border-radius: 8px;
@@ -522,6 +553,10 @@ a:hover {
   }
 
   .stats-section {
+    grid-template-columns: 1fr;
+  }
+
+  .research-gallery-grid {
     grid-template-columns: 1fr;
   }
 }
