@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Experience | Ziyi Wang</title>
     
-    <!-- Cache Control Meta Tags -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
-    <!-- Stylesheets with cache busting -->
-    <link rel="stylesheet" href="style.css?v=1.0.3">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="description" content="Research experience in aerial robotics, wheeled-humanoid teleoperation, perception, and autonomous navigation.">
+    <link rel="stylesheet" href="minimal.css?v=1.1.0">
 </head>
 <body>
     <nav class="navbar">
@@ -29,8 +23,8 @@
     
     <main>
         <div class="page-header">
-            <h1><i class="fa-solid fa-flask"></i> Research Experience</h1>
-            <p class="page-subtitle">Exploring embedded robotics, computer vision, and control systems</p>
+            <h1>Research</h1>
+            <p class="page-subtitle">Robotic perception, control, and systems that operate on real hardware.</p>
         </div>
 
         <section class="research-project">
@@ -71,7 +65,7 @@
 
         <section class="research-project">
             <div class="project-header">
-                <h2>Safety-Critical Control via Online System ID & Control Barrier Functions</h2>
+                <h2>Whole-Body Bilateral Teleoperation with Multi-Stage Object Parameter Estimation for Wheeled Humanoid Locomanipulation</h2>
                 <span class="date-badge">Aug 2024 - May 2025</span>
             </div>
             <p class="position-info">
@@ -79,40 +73,20 @@
                 <em>Advisor: Prof. Joao Ramos | University of Illinois at Urbana-Champaign</em>
             </p>
             <div class="project-description">
-                <p>Developing safety-critical control systems for humanoid robots using RGB-D perception and real-time system identification.</p>
+                <p>Contributed RGB-D perception and embedded sensing to an object-aware whole-body bilateral teleoperation framework for the wheeled humanoid SATYRR. The broader work was accepted for publication in IEEE Transactions on Robotics in 2026.</p>
                 <ul>
-                    <li>Engineered an end-to-end RGB-D perception pipeline (capture → point cloud filtering → feature extraction) delivering robust shape/pose priors to accelerate controller inertia estimation for humanoid SATYRR</li>
-                    <li>Implemented center snapping and geometry estimation by segmenting point clouds from depth data; produced consistent results across varying lighting/occlusion conditions</li>
-                    <li>Customized NVIDIA Jetson Orin Nano environment (device tree overlays, driver configuration, udev/systemd setup) enabling real-time sensing and motor interfacing on an embedded humanoid platform</li>
+                    <li>Deployed a RealSense and Jetson-based object-size estimator and evaluated its output against caliper measurements; buffering and outlier rejection improved accuracy by 15% on a benchmark object</li>
+                    <li>Built the RGB-D processing path that supplies object dimensions to the system's multi-stage inertial parameter estimator</li>
+                    <li>Supported the embedded sensing stack used in hardware experiments for lifting, delivering, and releasing heavy objects through whole-body teleoperation</li>
                 </ul>
-                <h3>Research Figures</h3>
-                <div class="research-gallery">
-                    <figure class="project-media research-figure research-figure-wide">
-                        <img src="assets/research/satyrr-framework.png" alt="Whole-body bilateral teleoperation framework for SATYRR with online object parameter estimation and control blocks" loading="lazy">
-                        <figcaption>Whole-body bilateral teleoperation framework integrating online object parameter estimation with control and safety filtering.</figcaption>
-                    </figure>
-                    <div class="research-gallery-grid">
-                        <figure class="project-media research-figure">
-                            <img src="assets/research/satyrr-object-estimation.png" alt="CenterSnap object size estimation and bottle-like object setup for inertial parameter estimation" loading="lazy">
-                            <figcaption>RGB-D object size estimation and physical object set used to initialize inertial parameter estimation.</figcaption>
-                        </figure>
-                        <figure class="project-media research-figure">
-                            <img src="assets/research/satyrr-hardware.png" alt="Human-machine interface and SATYRR wheeled humanoid hardware with camera, Jetson Orin Nano, RealSense, and gripper labels" loading="lazy">
-                            <figcaption>Custom human-machine interface and SATYRR hardware platform used for real-time sensing and teleoperation.</figcaption>
-                        </figure>
-                    </div>
-                    <figure class="project-media research-figure research-figure-wide">
-                        <img src="assets/research/satyrr-teleoperation-sequence.png" alt="Sequential SATYRR teleoperation snapshots showing lifting, moving, squatting, and releasing a heavy water bottle" loading="lazy">
-                        <figcaption>Sequential hardware snapshots from the heavy-object lifting, moving, squatting, and releasing task.</figcaption>
-                    </figure>
-                </div>
+                <p class="project-links"><a href="https://doi.org/10.1109/TRO.2026.3721690" target="_blank" rel="noopener">IEEE Transactions on Robotics paper</a></p>
             </div>
             <div class="keywords">
                 <span class="keyword">RGB-D Perception</span>
-                <span class="keyword">Point Cloud Processing</span>
-                <span class="keyword">Control Barrier Functions</span>
+                <span class="keyword">Object Parameter Estimation</span>
                 <span class="keyword">Embedded Systems</span>
-                <span class="keyword">Humanoid Robotics</span>
+                <span class="keyword">Wheeled Humanoids</span>
+                <span class="keyword">Bilateral Teleoperation</span>
             </div>
         </section>
 
@@ -143,13 +117,6 @@
             </div>
         </section>
 
-        <section class="cta-section">
-            <h2>Interested in Collaboration?</h2>
-            <p>I'm always open to discussing research opportunities and collaborations. Feel free to reach out!</p>
-            <a href="mailto:ziyiwangandd@outlook.com" class="cta-button">
-                <i class="fa-solid fa-envelope"></i> Contact Me
-            </a>
-        </section>
     </main>
 
     <footer>
