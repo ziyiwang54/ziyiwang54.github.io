@@ -7,7 +7,7 @@
     
     <meta name="description" content="Selected robotics, control, and embedded systems projects by Ziyi Wang.">
     <link rel="icon" type="image/jpeg" href="profile_image_small.jpg">
-    <link rel="stylesheet" href="minimal.css?v=1.2.0">
+    <link rel="stylesheet" href="minimal.css?v=1.3.0">
 </head>
 <body>
     <nav class="navbar">
@@ -26,6 +26,11 @@
         <div class="page-header">
             <h1>Projects</h1>
             <p class="page-subtitle">Selected robotics, control, and embedded systems projects</p>
+            <nav class="demo-nav" aria-label="Project demos">
+                <span>Watch demos:</span>
+                <a href="#arm-demo">6-DOF arm</a>
+                <a href="#impedance-demo">Robot dynamics and control</a>
+            </nav>
         </div>
 
         <section class="research-project">
@@ -41,9 +46,15 @@
                 <p>This demo shows a 6-DOF robotic arm tracing a horizontal figure-eight trajectory as part of manipulator motion validation. I worked on the arm's electromechanical bring-up, joint-level testing, communication-path debugging, and the workflow used to exercise larger task-space motions after single-joint checks.</p>
                 <p>The broader arm system integrated actuator communication, embedded control, and motion-planning workflows used during iterative arm development. This trajectory demo is one compact view of the validation process: smooth multi-joint coordination, repeatable path execution, and practical debugging on real hardware.</p>
 
-                <h3>Horizontal Figure-Eight Demo</h3>
-                <div class="project-media embed-frame">
-                    <iframe src="https://www.youtube.com/embed/qu9xCOVYAVY" title="6-DOF robotic arm horizontal figure-eight demo" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3 id="arm-demo">Horizontal Figure-Eight Demo</h3>
+                <figure class="project-media">
+                    <div class="embed-frame">
+                        <iframe src="https://www.youtube.com/embed/qu9xCOVYAVY" title="6-DOF robotic arm horizontal figure-eight demo" aria-describedby="arm-caption" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <figcaption id="arm-caption">Hardware trajectory validation: a horizontal figure-eight motion after joint-level bring-up and communication debugging.</figcaption>
+                </figure>
+                <div class="project-links">
+                    <a href="https://www.youtube.com/watch?v=qu9xCOVYAVY" class="btn-small" target="_blank" rel="noopener">Watch on YouTube</a>
                 </div>
             </div>
             <div class="keywords">
@@ -75,9 +86,15 @@
                     <img src="489demo/zigzag.avif" alt="Zigzag trajectory used in the ECE 489 manipulator task" width="1029" height="788" loading="lazy">
                 </div>
 
-                <h3>Full Motion Demo</h3>
-                <div class="project-media embed-frame">
-                    <iframe src="https://www.youtube.com/embed/SiWEWoPlklc" title="ECE 489 Robot Dynamics and Control final project demo" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3 id="impedance-demo">Full Motion Demo</h3>
+                <figure class="project-media">
+                    <div class="embed-frame">
+                        <iframe src="https://www.youtube.com/embed/SiWEWoPlklc" title="ECE 489 Robot Dynamics and Control final project demo" aria-describedby="impedance-caption" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <figcaption id="impedance-caption">CRS manipulator task sequence: peg insertion, constrained zigzag tracking, and controlled contact with a fragile object.</figcaption>
+                </figure>
+                <div class="project-links">
+                    <a href="https://www.youtube.com/watch?v=SiWEWoPlklc" class="btn-small" target="_blank" rel="noopener">Watch on YouTube</a>
                 </div>
 
             </div>

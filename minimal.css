@@ -59,7 +59,8 @@ a:hover {
 }
 
 a:focus-visible,
-summary:focus-visible {
+summary:focus-visible,
+video:focus-visible {
     outline: 2px solid #1772d0;
     outline-offset: 2px;
 }
@@ -144,6 +145,22 @@ body > main:not(.page) {
     margin-bottom: 6px;
 }
 
+.demo-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.demo-nav span {
+    color: #666;
+}
+
+[id] {
+    scroll-margin-top: 24px;
+}
+
 .page-subtitle,
 .position-info,
 .date-badge,
@@ -187,6 +204,13 @@ body > main:not(.page) {
 
 .project-media {
     margin: 16px 0;
+}
+
+.project-media figcaption {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .project-media img,
